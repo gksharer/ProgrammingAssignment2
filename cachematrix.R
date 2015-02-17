@@ -1,4 +1,4 @@
-## cachematrix.R functioni computes and caches the inverse of a matrix. 
+## cachematrix.R function computes and caches the inverse of a matrix. 
 ## It consists of two functions : makeCacheMatrix, cacheSolve
 
 ## makeCacheMatrix creates a matrix object that can cache its inverse
@@ -26,9 +26,9 @@ cacheSolve <- function(x, ...) {
             message("getting cached inverse")
             return(i)
         }
-        mdata <- x$get()        ## if no, retrieve input matrix x
-        i <- solve(mdata, ...)  ## compute inverse of x
-        x$setinv(i)             ## cache inverse for future use
-        i                       ## return matrix inverse
+        mdata <- x$get()        ## if no, retrieves input matrix x
+        i <- solve(mdata, ...)  ## computes inverse of x
+        x$setinv(i)             ## caches inverse for future use
+        i                       ## returns matrix inverse
 }
 
